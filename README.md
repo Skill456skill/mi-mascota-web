@@ -6,7 +6,7 @@
 
 ## 🌐 Sitio Web
 
-📍 [https://skill456skill.github.io/mi-mascota-web/] *(en construcción)*
+📍 [*Deshabilitado por el momento*] *(en construcción)*
 
 ---
 
