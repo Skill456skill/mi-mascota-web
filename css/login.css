@@ -1,0 +1,246 @@
+/* Estilos específicos para la página de login */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height) - var(--nav-height) - 100px);
+    padding: 2rem 1rem;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    transition: border-color 0.2s;
+    padding-right: 10%;
+    flex: auto;
+    background: transparent;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.login-buttons .secondary-button {
+    background-color: #e5e7eb;
+    color: gray;
+}
+
+.login-buttons .secondary-button:hover {
+    background-color: #0263b7;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.login-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.login-links button {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login-links button:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los iconos de ojo */
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+}
+
+.eye-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.eye-open, .eye-closed {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toggle-password-btn:hover .eye-icon {
+    transform: scale(1.1);
+}
+
+.toggle-password-btn:active .eye-icon {
+    transform: scale(0.9);
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-header {
+    background-color: #f3f4f6;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.modal-header .modal-icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1f2937;
+}
+
+.modal-content {
+    padding: 1.5rem;
+}
+
+.modal-content p {
+    margin: 0 0 1.5rem 0;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal-button {
+    background-color: #0263b7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.modal-button:hover {
+    background-color: #0352a3;
+}
+
+.modal-button.register {
+    background-color: #10b981;
+}
+
+.modal-button.register:hover {
+    background-color: #059669;
+}
+
+.modal-button.success {
+    background-color: #10b981;
+}
+
+.modal-button.success:hover {
+    background-color: #059669;
+}
